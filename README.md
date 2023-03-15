@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The majority of components contained were originally sourced / inspired by Josh Comeau. If you enjoy high quality content-dense education delivery like I do, then I encourage you to check Josh's content out [Joy of React](https://www.joyofreact.com/)
+
+Some creative fuel/inspiration on a few css trickeries inspired by [linear app](https://linear.app/readme)
+
+This component library was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 

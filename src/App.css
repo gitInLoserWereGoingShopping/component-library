@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* .App {} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add background color or gradient for a retro look */
+  background: linear-gradient(to bottom, #ff00ff, hsl(272, 81%, 63%), hsl(185, 83%, 65%));
+}
+
+.App-title {
+  /* Set font family to a classic 90s font */
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  /* Set responsive font size to a larger, more exaggerated size */
+  font-size: 3em;
+  color: #ff00ff;
+  text-shadow: 2px 2px #000;
+  transform: translateY(0.25em);
+}
+
+.App-body {
+  margin-top: 1em;
+}
+
+.component-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1em;
+}
+
+.component-title {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5em;
+  color: #ff00ff;
+  text-shadow: 2px 2px #000;
+  animation: 1s linear 0s infinite normal none running glimmer-and-spice;
+}
+
+.component-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  gap: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes glimmer-and-spice {
+  2%,
+  60%,
+  63%,
+  78%,
+  81% {
+    transform: none;
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  62% {
+    transform: translate(-2px, 0px) skew(21deg);
+  }
+  80% {
+    opacity: 0.4;
+    transform: translate(2px, 0px) skew(-15deg);
   }
 }

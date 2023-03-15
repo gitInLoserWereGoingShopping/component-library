@@ -1,0 +1,52 @@
+/*
+  These are the "universal" styles which should
+  apply to all Sidenote instances.
+*/
+.wrapper {
+  padding: 24px;
+  border-left: 3px solid;
+  border-radius: 3px 6px 6px 3px;
+  margin-bottom: 32px;
+  color: aliceblue;
+}
+
+/*
+  These styles are specific for the given category.
+*/
+.notice {
+  background-color: hsl(210deg 55% 75% / 0.15);
+  border-color: hsl(245deg 100% 60%);
+}
+
+.warning {
+  background-color: hsl(40deg 100% 50% / 0.15);
+  border-color: hsl(30deg 100% 50%);
+}
+
+.error {
+  background-color: hsl(340deg 95% 43% / 0.15);
+  border-color: hsl(340deg 95% 60%);
+}
+
+.success {
+  background-color: hsl(160deg 100% 40% / 0.15);
+  border-color: hsl(160deg 100% 40%);
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+#never-say-never {
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  color: #ff00ff; /* fallback color for non-chrome/safari browsers */
+  background-clip: text;
+  /* Add background color or gradient for a retro look */
+  background-image: linear-gradient(to bottom, #ff00ff, hsl(272, 81%, 63%), hsl(185, 83%, 65%));
+}
+#never-say-never:hover {
+  background-image: linear-gradient(to top, #ff00ff, hsl(272, 81%, 63%), hsl(185, 83%, 65%));
+}
