@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <div className='App-title'>Components Library</div>
+        <div className='App-title'>Components</div>
       </header>
       <div className='App-body'>
         {/* TODO / Early gameplan/pseudo code for how to display each component
