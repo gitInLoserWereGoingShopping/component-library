@@ -29,7 +29,7 @@ const Sidenote = ({ type, title, children, expand = false }: SidenoteProps) => {
         {type ? plzGiveSidenoteIcon[type] : null}
       </div>
       <div className={`right ${isExpanded ? 'expand-right' : ''}`}>
-        <div className="title">{title}</div>
+        <div className="sidenote-title">{title}</div>
         <>{children}</>
       </div>
     </aside>
