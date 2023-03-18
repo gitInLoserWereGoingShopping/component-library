@@ -12,16 +12,3 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-/* This adds a neat little custom background color for when text is highlighted */
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection,
-p::selection,
-strong::selection {
-  color: rgb(208, 214, 224);
-  background: rgb(79, 82, 180);
-}
