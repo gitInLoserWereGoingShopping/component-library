@@ -17,8 +17,9 @@ function App() {
             <Sidenote type='notice' title='Sidenote Notice...'>
               <p>Hello World</p>
             </Sidenote>
-            <Sidenote type='success' title='Sidenote Success!'>
+            <Sidenote type='success' title='Sidenote Success!' expand>
               <p>Muchness of success</p>
+              <p>click to expand</p>
             </Sidenote>
             <Sidenote type='warning' title='This is a warning!'>
               <>
@@ -29,7 +30,7 @@ function App() {
             <Sidenote type='error' title='Error occurred!'>
               <p>Yay reusability!</p>
             </Sidenote>
-            <Sidenote type='tiedye' title='oh em gee itz tiedye!'>
+            <Sidenote type='tiedye' title='oh em gee itz tiedye!' expand>
               <p>Yay tiedye!</p>
             </Sidenote>
           </div>
