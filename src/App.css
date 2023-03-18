@@ -14,8 +14,7 @@
   /* Set responsive font size to a larger, more exaggerated size */
   font-size: 3em;
   color: mediumspringgreen;
-  /* color: mediumspringgreen; */
-  text-shadow: 4px 5px #000;
+  text-shadow: 4px 5px hsl(272, 81%, 63%);
   transform: translateY(0.22em);
 }
 
@@ -34,7 +33,7 @@
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 1.5em;
   color: mediumspringgreen;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 2px hsl(272, 81%, 63%);
   animation: 1s linear 0s infinite normal none running glimmer-and-spice;
 }
 

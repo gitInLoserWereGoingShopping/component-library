@@ -3,16 +3,33 @@
   apply to all Sidenote instances.
 */
 .wrapper {
-  padding: 24px;
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+  padding: 5px 10px 10px 0px;
   border-left: 3px solid;
   border-radius: 3px 6px 6px 3px;
-  margin-bottom: 32px;
+  margin-bottom: 0.5em;
   color: aliceblue;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /*
   These styles are specific for the given category.
 */
+.tiedye {
+  color: #ff00ff;
+}
+
 .notice {
   background-color: hsl(210deg 55% 75% / 0.15);
   border-color: hsl(245deg 100% 60%);
@@ -30,23 +47,42 @@
 
 .success {
   background-color: hsl(160deg 100% 40% / 0.15);
-  border-color: hsl(160deg 100% 40%);
+  border-color: mediumspringgreen;
+}
+
+.sidenote-icon {
+  margin: 2px 5px 5px 5px;
+}
+
+.sidenote-icon-notice {
+  color: hsl(245deg 100% 60%);
+}
+.sidenote-icon-warning {
+  color: hsl(30deg 100% 50%);
+}
+.sidenote-icon-error {
+  color: hsl(340deg 95% 60%);
+}
+.sidenote-icon-success {
+  color: mediumspringgreen;
+}
+.sidenote-icon-gift {
+  color: #ff00ff;
 }
 
 .title {
-  font-size: 1.2em;
+  font-size: 1.25em;
   font-weight: bold;
-  margin-bottom: 4px;
 }
 
 #never-say-never {
   position: relative;
   -webkit-text-fill-color: transparent;
-  color: #ff00ff; /* fallback color for non-chrome/safari browsers */
+  color: #ff00ff;
   background-clip: text;
-  /* Add background color or gradient for a retro look */
-  background-image: linear-gradient(to bottom, #ff00ff, hsl(272, 81%, 63%), hsl(185, 83%, 65%));
+  background-image: linear-gradient(to right, #ff00ff, hsl(272, 81%, 63%), mediumspringgreen);
 }
+
 #never-say-never:hover {
-  background-image: linear-gradient(to top, #ff00ff, hsl(272, 81%, 63%), hsl(185, 83%, 65%));
+  background-image: linear-gradient(to left, #ff00ff, hsl(272, 81%, 63%), mediumspringgreen);
 }
