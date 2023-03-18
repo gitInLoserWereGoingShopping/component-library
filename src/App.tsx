@@ -1,8 +1,22 @@
 import React from 'react';
 import './App.css';
-import Sidenote from './components/Sidenote';
 
-function App() {
+/** Import Components **/
+import Sidenote from './components/Sidenote';
+import Movie from './components/Movie';
+
+//simulate fetching movie data
+import { getMovies } from './api/movies';
+export type MovieType = {
+    id: string;
+    title: string;
+    posterSrc: string;
+    synopsis: string;
+    rating: number;
+};
+
+const App = () => {
+  const movies: MovieType[] = getMovies();
   return (
     <div className='App'>
       <header className='App-header'>
@@ -33,6 +47,14 @@ function App() {
             <Sidenote type='tiedye' title='oh em gee itz tiedye!' expand>
               <p>Yay tiedye!</p>
             </Sidenote>
+          </div>
+        </section>
+
+        {/* MOVIE COMPONENT */}
+        <section className='component-section'>
+          <div className='component-title'>{`<Movie />`}</div>
+          <div className='component-wrapper'>
+            {movies.map((movie: MovieType) => (<Movie key={movie.id} movie={movie}/>))}
           </div>
         </section>
 
