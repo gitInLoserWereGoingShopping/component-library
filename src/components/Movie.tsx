@@ -7,7 +7,6 @@ type MovieProp = {
 }
 
 const Movie = ({ movie }: MovieProp) => {
-  console.count('Movie');
   const { title, posterSrc, synopsis, rating } = movie;
   return (
     <article className='movie'>
@@ -16,7 +15,12 @@ const Movie = ({ movie }: MovieProp) => {
       </div>
       <div className='textWrapper'>
         <div className='title'>{title}</div>
-        <p><strong>Rating:</strong>{rating}</p>
+        <div>
+          <strong>Rating:</strong>{' '}
+          <span className={movie.rating >= 9 ? 'glowingReview' : ''}>
+            {rating}
+          </span>
+        </div>
         <p className='synopsis'>{synopsis}</p>
       </div>
     </article>
@@ -24,4 +28,3 @@ const Movie = ({ movie }: MovieProp) => {
 };
 
 export default Movie;
-

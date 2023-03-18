@@ -16,7 +16,6 @@ export type MovieType = {
 };
 
 const App = () => {
-  console.count('App');
   const movies: MovieType[] = getMovies();
   return (
     <div className='App'>
@@ -27,7 +26,7 @@ const App = () => {
 
         {/* SIDENOTE COMPONENT */}
         <section className='component-section'>
-          <div className='component-title'>{`📝 <Sidenote />`}</div>
+          <div className='component-title'>{`<Sidenote />`}</div>
           <div className='component-wrapper'>
             <Sidenote type='notice' title='Sidenote Notice...'>
               <p>Hello World</p>
@@ -53,7 +52,7 @@ const App = () => {
 
         {/* MOVIE COMPONENT */}
         <section className='component-section'>
-          <div className='component-title'>{`📼 <Movie />`}</div>
+          <div className='component-title'>{`<Movie />`}</div>
           <div className='component-wrapper'>
             {movies.map((movie: MovieType) => (<Movie key={movie.id} movie={movie}/>))}
           </div>

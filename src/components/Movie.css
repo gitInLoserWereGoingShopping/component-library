@@ -1,19 +1,81 @@
-.movie {
+@keyframes bounce {
+  from {
+    transform: scale(1);
+  }
 
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes glow {
+  from {
+    color: hsl(272, 81%, 53%);
+  }
+
+  to {
+    color: hsl(292deg 100% 73%);
+  }
+}
+
+.glowingReview {
+  color: hsl(272, 81%, 63%);
+}
+
+.glowingReview {
+  animation:
+    bounce 1000ms alternate infinite ease-in-out,
+    glow 1500ms alternate infinite ease-in-out;
+}
+
+.movie {
+  display: flex;
+  gap: 32px;
+  max-width: 600px;
 }
 
 .thumbnailWrapper {
-
+  flex: 1;
+  max-width: 250px;
 }
 
 .textWrapper {
-
+  flex: 1;
+  color: mediumspringgreen;
+  padding: 0.5em;
 }
 
 .title {
+  font-size: 1.25em;
+  color: mediumspringgreen;
+  text-shadow: 2px 2px hsl(272, 81%, 63%);
+  margin-bottom: 0.25em;
+}
 
+.thumbnailWrapper img {
+  display: block;
+  width: 100%;
+  border: 3px solid hsl(272, 81%, 53%);
+  border-radius: 8px;
+}
+
+.movie {
+  margin-bottom: 0.5em;
 }
 
 .synopsis {
-  
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+  overflow: hidden;
+}
+
+@media (max-width: 400px) {
+  .movie {
+    flex-direction: column;
+  }
+
+  .thumbnailWrapper {
+    align-self: center;
+  }
 }
