@@ -31,12 +31,12 @@
   These styles are specific for the given category.
 */
 .tiedye {
-  color: #ff00ff;
+  border-color: mediumslateblue;
 }
 
 .notice {
   background-color: hsl(210deg 55% 75% / 0.15);
-  border-color: hsl(245deg 100% 60%);
+  border-color: mediumslateblue;
 }
 
 .warning {
@@ -59,7 +59,7 @@
 }
 
 .sidenote-icon-notice {
-  color: hsl(245deg 100% 60%);
+  color: mediumslateblue;
 }
 .sidenote-icon-warning {
   color: hsl(30deg 100% 50%);
@@ -71,7 +71,7 @@
   color: mediumspringgreen;
 }
 .sidenote-icon-gift {
-  color: #ff00ff;
+  color: mediumslateblue;
 }
 
 .sidenote-title {

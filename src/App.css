@@ -5,16 +5,15 @@
   align-items: center;
   justify-content: center;
   /* Add background color or gradient for a retro look */
-  background: linear-gradient(to top, #680e74, hsl(272, 81%, 63%), mediumspringgreen);
+  background: linear-gradient(to top, #680e74, mediumslateblue, mediumspringgreen);
 }
 
 .App-title {
-  /* Set font family to a classic 90s font */
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", Luminari, sans-serif;
   /* Set responsive font size to a larger, more exaggerated size */
   font-size: 3em;
   color: mediumspringgreen;
-  text-shadow: 4px 5px hsl(272, 81%, 63%);
+  text-shadow: 4px 5px mediumslateblue;
   transform: translateY(0.22em);
 }
 
@@ -30,10 +29,10 @@
 }
 
 .component-title {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", Luminari, sans-serif;
   font-size: 2em;
   color: mediumspringgreen;
-  text-shadow: 2px 2px hsl(272, 81%, 63%);
+  text-shadow: 2px 2px mediumslateblue;
   animation: 1s linear 0s infinite normal none running glimmer-and-spice;
   margin-bottom: 0.5em;
 }
