@@ -2,8 +2,9 @@ import React from 'react';
 import './App.css';
 
 /** Import Components **/
-import Sidenote from './components/Sidenote';
+import Divider from './components/Divider';
 import Movie from './components/Movie';
+import Sidenote from './components/Sidenote';
 
 //simulate fetching movie data
 import { getMovies } from './api/movies';
@@ -41,14 +42,16 @@ const App = () => {
                 <p>In this example, we're using lyrics to elevate our <strong>wellbeing!</strong></p>
               </>
             </Sidenote>
-            <Sidenote type='error' title='Error occurred!'>
+            <Sidenote type='error' title='Error occurred!' expand>
               <p>Yay reusability!</p>
             </Sidenote>
-            <Sidenote type='tiedye' title='oh em gee itz tiedye!' expand>
+            <Sidenote type='tiedye' title='oh em gee itz tiedye!'>
               <p>Yay tiedye!</p>
             </Sidenote>
           </div>
         </section>
+
+        <Divider/>
 
         {/* MOVIE COMPONENT */}
         <section className='component-section'>
@@ -57,6 +60,8 @@ const App = () => {
             {movies.map((movie: MovieType) => (<Movie key={movie.id} movie={movie}/>))}
           </div>
         </section>
+
+        <Divider/>
 
         {/* FUTURE COMPONENT */}
         <section className='component-section'>
