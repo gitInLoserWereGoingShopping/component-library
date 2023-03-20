@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { storage } from './firebase'; //🔥
 
 /** Import Components **/
 import Divider from './components/Divider';
@@ -8,6 +9,7 @@ import Sidenote from './components/Sidenote';
 
 //simulate fetching movie data
 import { getMovies } from './api/movies';
+import ImageUpload from './components/ImageUpload';
 export type MovieType = {
     id: string;
     title: string;
@@ -58,6 +60,19 @@ const App = () => {
           <div className='component-title'>{`<Movie />`}</div>
           <div className='component-wrapper'>
             {movies.map((movie: MovieType) => (<Movie key={movie.id} movie={movie}/>))}
+          </div>
+        </section>
+
+        <Divider/>
+
+        {/* IMAGE/FILE UPLOAD COMPONENT */}
+        <section className='component-section'>
+          <Sidenote type='notice' title='Uploading is currently disabled!' expand>
+              <p>Example images uploaded using component</p>
+          </Sidenote>
+          <div className='component-title'>{`<ImageUpload />`}</div>
+          <div className='component-wrapper'>
+            <ImageUpload storage={storage} />
           </div>
         </section>
 
