@@ -56,7 +56,7 @@ const ImageUpload = ({ storage }: ImageUploadProps) => {
         </button>
       </div>
       <div className='imageUploadBottom'>
-        {Array.from(new Set(imageList)).map((url, id) => <img src={url} alt='memory snapshot' key={url + id}/>)}
+        {Array.from(new Set(imageList)).map((url, id) => <img className='imgUpload' src={url} alt='memory snapshot' key={url + id}/>)}
       </div>
     </div>
   );
