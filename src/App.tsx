@@ -6,10 +6,12 @@ import { storage } from './firebase'; //🔥
 import Divider from './components/Divider';
 import Movie from './components/Movie';
 import Sidenote from './components/Sidenote';
+import NeonButton from './components/NeonButton';
 
 //simulate fetching movie data
 import { getMovies } from './api/movies';
 import ImageUpload from './components/ImageUpload';
+
 export type MovieType = {
     id: string;
     title: string;
@@ -73,6 +75,16 @@ const App = () => {
           <div className='component-title'>{`<ImageUpload />`}</div>
           <div className='component-wrapper'>
             <ImageUpload storage={storage} />
+          </div>
+        </section>
+
+        <Divider/>
+
+        {/* NEON BUTTON COMPONENT */}
+        <section className='component-section'>
+          <div className='component-title'>{`<NeonButton />`}</div>
+          <div className='component-wrapper'>
+            <NeonButton label='Neon Btn' onClick={() => console.log('<NeonButton/> clicked!')} />
           </div>
         </section>
 
