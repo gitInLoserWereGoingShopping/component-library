@@ -6,10 +6,10 @@
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: 0 0 10px mediumspringgreen, 0 0 23px #ff00ff;
   transition: transform 0.1s ease-in-out;
 }
 
 .neonBtnBaseStyle:hover {
   transform: translate3d(1px, -2px, 0px);
+  box-shadow: 0 0 8px 3px mediumspringgreen, 0 0 23px 1px #ff00ff;
 }
