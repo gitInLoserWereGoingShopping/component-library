@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import './ImageUpload.css';
 import { FirebaseStorage, ref, uploadBytes, list, getDownloadURL } from 'firebase/storage';
 import { v4 } from 'uuid';
 import { getTimestamp } from '../utils';
+import useDisplayImageInfo from '../weCanDoHooksNow/displayImageInfo';
 
 type ImageUploadProps = {
   storage: FirebaseStorage;
@@ -12,6 +13,8 @@ const ImageUpload = ({ storage }: ImageUploadProps) => {
   const [imageUpload, setImageUpload] = useState<File|null>(null);
   const [imageList, setImageList] = useState<string[]>([]);
   const [isUploading, setIsUploading] = useState<boolean>(false);
+  const [somefin, toggle, exportableFunction] = useDisplayImageInfo();
+  console.count(somefin?.nothin);
 
   useEffect(() => {
     list(ref(storage, 'images/'), { maxResults: 20 }).then((response) => {
@@ -56,10 +59,18 @@ const ImageUpload = ({ storage }: ImageUploadProps) => {
         </button>
       </div>
       <div className='imageUploadBottom'>
-        {Array.from(new Set(imageList)).map((url, id) => <img className='imgUpload' src={url} alt='memory snapshot' key={url + id}/>)}
+        {Array.from(new Set(imageList)).map((url, id) => (
+          <img
+            className={`imgUpload ${toggle ? 'toggled' : ''}`}
+            src={url}
+            alt='memory snapshot'
+            key={url + id}
+            onClick={exportableFunction}
+          />
+        ))}
       </div>
     </div>
   );
 }
 
-export default ImageUpload;
+export default memo(ImageUpload);
