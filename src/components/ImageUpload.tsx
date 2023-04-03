@@ -13,7 +13,12 @@ const ImageUpload = ({ storage }: ImageUploadProps) => {
   const [imageUpload, setImageUpload] = useState<File|null>(null);
   const [imageList, setImageList] = useState<string[]>([]);
   const [isUploading, setIsUploading] = useState<boolean>(false);
-  const [somefin, toggle, exportableFunction] = useDisplayImageInfo();
+  const [
+    somefin,
+    toggle,
+    exportableFunction,
+    addZoomToCursor,
+  ] = useDisplayImageInfo();
   console.count(somefin?.nothin);
 
   useEffect(() => {
@@ -65,7 +70,16 @@ const ImageUpload = ({ storage }: ImageUploadProps) => {
             src={url}
             alt='memory snapshot'
             key={url + id}
+            id={url + id}
             onClick={exportableFunction}
+            onMouseEnter={() => {
+              const hiImFromTheDom = document.getElementById(`${url + id}`);
+              addZoomToCursor(hiImFromTheDom, 1.2);
+            }}
+            onMouseLeave={() => {
+              const hiImFromTheDom = document.getElementById(`${url + id}`);
+              if (hiImFromTheDom) hiImFromTheDom.style.transform = 'scale(1)';
+            }}
           />
         ))}
       </div>
