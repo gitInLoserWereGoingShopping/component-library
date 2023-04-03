@@ -19,8 +19,12 @@
 }
 
 .imgUpload {
-  max-width: 300px;
+  max-width: 142%;
+  height: auto;
   border-radius: 5px;
   box-shadow: mediumslateblue 0px 1px 7px 0px;
 }
 
+.toggled:nth-child(even) {
+  border-radius: 50%;
+}
