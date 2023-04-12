@@ -7,6 +7,7 @@ import Divider from './components/Divider';
 import Movie from './components/Movie';
 import Sidenote from './components/Sidenote';
 import NeonButton from './components/NeonButton';
+import UseRefButton from './components/UseRefButton';
 
 //simulate fetching movie data
 import { getMovies } from './api/movies';
@@ -85,6 +86,14 @@ const App = () => {
           <div className='component-title'>{`<NeonButton />`}</div>
           <div className='component-wrapper'>
             <NeonButton label='Neon Btn' onClick={() => console.log('<NeonButton/> clicked!')} />
+          </div>
+        </section>
+
+        {/* USEREF BUTTON COMPONENT */}
+        <section className='component-section'>
+          <div className='component-title'>{`<UseRefButton />`}</div>
+          <div className='component-wrapper'>
+            <UseRefButton/>
           </div>
         </section>
 
